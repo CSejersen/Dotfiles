@@ -5,8 +5,7 @@ How to use example:
   config commit -m "Add vimrc"
   config push
 
-
-Installing dotfiles onto a new system:
+To install on new system simply run the config_install.sh script which does the following:
 
 Prior to the installation make sure to commit the alias to your .bashrc or .zsh:
 
