@@ -1,9 +1,11 @@
-How to use example:
+# How to use example:
 
+```bash
   config status
   config add .vimrc
   config commit -m "Add vimrc"
   config push
+```
 
 To install on new system simply run the config_install.sh script which does the following:
 
