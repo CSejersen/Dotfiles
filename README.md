@@ -1,4 +1,12 @@
-#Installing dotfiles onto a new system:
+How to use example:
+
+  config status
+  config add .vimrc
+  config commit -m "Add vimrc"
+  config push
+
+
+Installing dotfiles onto a new system:
 
 Prior to the installation make sure to commit the alias to your .bashrc or .zsh:
 
@@ -28,5 +36,19 @@ The step above might fail with a message like:
   Please move or remove them before you can switch branches.
   Aborting
 
-
 This is because your $HOME folder might already have some stock configuration files which would be overwritten by Git. The solution is simple: back up the files if you care about them, remove them if you don't care. I provide you with a possible rough shortcut to move all the offending files automatically to a backup folder:
+
+  mkdir -p .config-backup && \
+  config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
+  xargs -I{} mv {} .config-backup/{}
+
+Re-run the check out if you had problems:
+
+  config checkout
+
+Set the flag showUntrackedFiles to no on this specific (local) repository:
+
+  config config --local status.showUntrackedFiles no
+
+You're done, from now on you can now type config commands to add and update your dotfiles:
+
