@@ -1,4 +1,4 @@
-# How to use example:
+# Example of use:
 
 ```bash
   config status
