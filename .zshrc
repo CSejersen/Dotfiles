@@ -110,6 +110,8 @@ alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias tmuxconfig="nvim ~/.tmux.conf"
 alias nvimconfig="cd ~/.config/nvim && nvim lua/sejersen/core/keymaps.lua"
+alias skhdconfig="nvim ~/.config/skhd/skhdrc"
+alias yabaiconfig="nvim ~/.config/yabai/yabairc"
 
 alias a="~/dev/shell-scripts/airpods.sh"
 alias s="~/dev/shell-scripts/speakers.sh"
