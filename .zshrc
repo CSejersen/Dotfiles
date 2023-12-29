@@ -113,8 +113,8 @@ alias nvimconfig="cd ~/.config/nvim && nvim lua/sejersen/core/keymaps.lua"
 alias skhdconfig="nvim ~/.config/skhd/skhdrc"
 alias yabaiconfig="nvim ~/.config/yabai/yabairc"
 
-alias a="~/dev/shell-scripts/airpods.sh"
-alias s="~/dev/shell-scripts/speakers.sh"
+alias a="~/dev/scripts/airpods.sh"
+alias s="~/dev/scripts/speakers.sh"
 alias gs="git status"
 alias ..="cd .."
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
