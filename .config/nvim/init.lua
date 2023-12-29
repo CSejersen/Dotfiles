@@ -18,3 +18,4 @@ vim.g.vimtex_view_skim_activate = 1
 
 -- Set the local leader key to ,
 vim.g.maplocalleader = ","
+
