@@ -9,5 +9,6 @@ brew install qmk
 brew install skhd
 brew install yabai
 brew install coreutils
+brew install fzf
 
 
