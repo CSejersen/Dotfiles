@@ -5,7 +5,7 @@ brew install zoxide
 brew install git
 brew install lazygit
 brew install pyenv
-brew install qmk
+#brew install qmk
 brew install skhd
 brew install yabai
 brew install coreutils
