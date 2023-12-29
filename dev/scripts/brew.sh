@@ -10,5 +10,6 @@ brew install skhd
 brew install yabai
 brew install coreutils
 brew install fzf
+brew install iterm2
 
 
