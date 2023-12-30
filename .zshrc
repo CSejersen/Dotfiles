@@ -81,7 +81,9 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting macos)
+
+# Colorize colors "ccat" ouput. pygmentize python package has to be installed! 
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting macos colorize)
 
 source $ZSH/oh-my-zsh.sh
 
