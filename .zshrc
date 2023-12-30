@@ -113,6 +113,7 @@ alias nvimconfig="cd ~/.config/nvim && nvim lua/sejersen/core/keymaps.lua"
 alias skhdconfig="nvim ~/.config/skhd/skhdrc"
 alias yabaiconfig="nvim ~/.config/yabai/yabairc"
 alias wiki="nvim ~/vimwiki/index.wiki"
+alias starshipconfig="nvim ~/.config/starship.toml"
 
 alias a="~/dev/scripts/airpods.sh"
 alias s="~/dev/scripts/speakers.sh"
@@ -120,11 +121,12 @@ alias gs="git status"
 alias ..="cd .."
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
+# Using starship promt
 eval "$(starship init zsh)"
 
 # For zoxide improved cd command
 eval "$(zoxide init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
