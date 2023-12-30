@@ -22,7 +22,8 @@ treesitter.setup({
     "gitignore",
     "python",
     "cpp",
-    "c"
+    "c",
+    "vimdoc"
   },
   -- auto install above language parsers
   auto_install = true,
