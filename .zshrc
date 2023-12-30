@@ -112,6 +112,7 @@ alias tmuxconfig="nvim ~/.tmux.conf"
 alias nvimconfig="cd ~/.config/nvim && nvim lua/sejersen/core/keymaps.lua"
 alias skhdconfig="nvim ~/.config/skhd/skhdrc"
 alias yabaiconfig="nvim ~/.config/yabai/yabairc"
+alias wiki="nvim ~/vimwiki/index.wiki"
 
 alias a="~/dev/scripts/airpods.sh"
 alias s="~/dev/scripts/speakers.sh"
