@@ -1,0 +1,9 @@
+[python]
+symbol = " "
+style = "bold green"
+
+[battery]
+disabled = true
+
+
+
