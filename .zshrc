@@ -83,7 +83,13 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 
 # Colorize colors "ccat" ouput. pygmentize python package has to be installed! 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting macos colorize)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting macos colorize vi-mode)
+#
+# Enable vi mode
+bindkey -v
+# configure vi-mode plugin
+MODE_INDICATOR="%F{white}+%f"
+INSERT_MODE_INDICATOR="%F{yellow}+%f"
 
 source $ZSH/oh-my-zsh.sh
 
