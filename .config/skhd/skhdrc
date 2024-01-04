@@ -1,6 +1,6 @@
 # -- Changing Window Focus --
 cmd - return : open -a iTerm
-cmd - backspace : open -a "Google Chrome"
+cmd - backspace : open -a "Firefox"
 
 # change window focus within space
 alt - j : yabai -m window --focus south
