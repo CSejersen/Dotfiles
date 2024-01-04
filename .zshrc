@@ -124,6 +124,7 @@ alias yabaiconfig="nvim ~/.config/yabai/yabairc"
 alias wiki="nvim ~/vimwiki/index.wiki"
 alias starshipconfig="nvim ~/.config/starship.toml"
 alias ls="ls -1"
+alias cs="config status"
 
 alias a="~/dev/scripts/airpods.sh"
 alias s="~/dev/scripts/speakers.sh"
@@ -140,3 +141,9 @@ eval "$(zoxide init zsh)"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+# # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+# export PATH="$PATH:$HOME/.rvm/bin"
+
+. "$HOME/.asdf/asdf.sh"
+. "$HOME/.asdf/completions/asdf.bash"
