@@ -7,13 +7,12 @@ local ensure_packer = function()
 end
 local packer_bootstrap = ensure_packer() -- true if packer was just installed
 
-
 -- autocommand that reloads neovim and installs/updates/removes plugins
 -- when file is saved
 vim.cmd([[ 
   augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
+  autocmd!
+  autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
   augroup end
 ]])
 
@@ -21,108 +20,115 @@ vim.cmd([[
 local status, packer = pcall(require, "packer")
 if not status then
   return
-  
+
 end
 -- add list of plugins to install
 return packer.startup(function(use)
-    -- packer can manage itself
+  -- packer can manage itself
 
-    use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
+  use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-    use("wbthomason/packer.nvim")
+  use("wbthomason/packer.nvim")
+  -- colorschemes
+  use("bluz71/vim-nightfly-guicolors")
+  use("sainnhe/everforest")
+  use { "catppuccin/nvim", as = "catppuccin" }
+  use 'Mofiqul/dracula.nvim'
+  use({ 'rose-pine/neovim', as = 'rose-pine' })
 
-    -- colorschemes
-    use("bluz71/vim-nightfly-guicolors")
-    use("sainnhe/everforest")
-    use { "catppuccin/nvim", as = "catppuccin" }
-    use 'Mofiqul/dracula.nvim'
-    use({ 'rose-pine/neovim', as = 'rose-pine' })
+  use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
-    use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
+  use("szw/vim-maximizer") -- maximizes and restores current window
 
-    use("szw/vim-maximizer") -- maximizes and restores current window
+  -- essential plugins
+  use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
+  use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
-    -- essential plugins
-    use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
-    use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
+  -- commenting with gc
+  use("numToStr/Comment.nvim")
 
-    -- commenting with gc
-    use("numToStr/Comment.nvim")
+  -- vs-code like icons
+  use("nvim-tree/nvim-web-devicons")
 
-    -- file explorer
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional
-        },
+  -- file explorer
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional
+    },
+  }
+
+  use {
+    "folke/trouble.nvim",
+    requires = {
+      'nvim-tree/nvim-web-devicons',
+    },
+  }
+
+  -- status line
+  use("nvim-lualine/lualine.nvim")
+
+  -- fuzzy finding with telescope
+  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
+
+  use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
+
+  use {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v1.x',
+    requires = {
+      -- LSP Support
+      {'neovim/nvim-lspconfig'},
+      {'williamboman/mason.nvim'},
+      {'williamboman/mason-lspconfig.nvim'},
+
+      -- Autocompletion
+      {'hrsh7th/nvim-cmp'},
+      {'hrsh7th/cmp-buffer'},
+      {'hrsh7th/cmp-path'},
+      {'saadparwaiz1/cmp_luasnip'},
+      {'hrsh7th/cmp-nvim-lsp'},
+      {'hrsh7th/cmp-nvim-lua'},
+
+      -- Snippets
+      {'L3MON4D3/LuaSnip'},
+      {'rafamadriz/friendly-snippets'},
     }
+  }
+  -- VimBeGoodGame by ThePrimeage
+  use("ThePrimeagen/vim-be-good")
 
-    -- vs-code like icons
-    use("nvim-tree/nvim-web-devicons")
+  use("folke/zen-mode.nvim")
 
-    -- status line
-    use("nvim-lualine/lualine.nvim")
-    
-    -- fuzzy finding with telescope
-    use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
-    use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
+  -- undo tree
+  use("mbbill/undotree")
 
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v1.x',
-        requires = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},
-            {'williamboman/mason.nvim'},
-            {'williamboman/mason-lspconfig.nvim'},
+  use({
+    "nvim-treesitter/nvim-treesitter",
+    run = function()
+      local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+      ts_update()
+    end,
+  })
 
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-buffer'},
-            {'hrsh7th/cmp-path'},
-            {'saadparwaiz1/cmp_luasnip'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'hrsh7th/cmp-nvim-lua'},
+  -- auto closing
+  use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
+  use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
-            -- Snippets
-            {'L3MON4D3/LuaSnip'},
-            {'rafamadriz/friendly-snippets'},
-        }
-    }
-    -- VimBeGoodGame by ThePrimeage
-    use("ThePrimeagen/vim-be-good")
+  -- vimTex
+  use("lervag/vimtex")
 
-    use("folke/zen-mode.nvim")
+  -- color tags on hex colors
+  use("ap/vim-css-color")
 
-    -- undo tree
-    use("mbbill/undotree")
+  -- git integration
+  use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
+  use("tpope/vim-fugitive") -- git commands within nvim with :G
 
-    use({
-        "nvim-treesitter/nvim-treesitter",
-        run = function()
-            local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
-            ts_update()
-        end,
-    })
-
-    -- auto closing
-    use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
-    use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
-
-    -- vimTex
-    use("lervag/vimtex")
-
-    -- color tags on hex colors
-    use("ap/vim-css-color")
-
-    -- git integration
-    use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
-    use("tpope/vim-fugitive") -- git commands within nvim with :G
-
-    -- note taking
-    use("vimwiki/vimwiki")
-    if packer_bootstrap then
-        require("packer").sync()
-    end
+  -- note taking
+  use("vimwiki/vimwiki")
+  if packer_bootstrap then
+    require("packer").sync()
+  end
 end)
 
