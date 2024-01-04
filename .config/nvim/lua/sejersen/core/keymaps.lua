@@ -1,10 +1,9 @@
 vim.g.mapleader = " "
 local keymap = vim.keymap -- for conciseness 
-
+--
 -- general keymaps 
 keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "<leader>nh", ":nohl<CR>")
-
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
 keymap.set("n", "<leader>-", "<C-x>")
