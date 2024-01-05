@@ -28,12 +28,35 @@ require('lazy').setup({
       vim.cmd.colorscheme 'catppuccin'
     end,
   },
-  -- Git related plugins
+  -- Git related
   'tpope/vim-fugitive',
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+  "christoomey/vim-tmux-navigator", -- tmux & split window navigation
+
+  "szw/vim-maximizer", -- maximizes and restores current window
+
+  -- essential plugins
+  "tpope/vim-surround", -- add, delete, change surroundings (it's awesome)
+  "inkarkat/vim-ReplaceWithRegister", -- replace with register contents using motion (gr + motion)
+
+  -- undo tree
+  "mbbill/undotree",
+
+  -- auto closing
+  "windwp/nvim-autopairs", -- autoclose parens, brackets, quotes, etc...
+  { "windwp/nvim-ts-autotag", dependencies = "nvim-treesitter"}, -- autoclose tags
+
+  -- vimTex
+  "lervag/vimtex",
+
+  -- color tags on hex colors
+  "ap/vim-css-color",
+
+  -- note taking
+  "vimwiki/vimwiki",
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   {
@@ -87,11 +110,14 @@ require('lazy').setup({
 
   {
     -- Add indentation guides even on blank lines
+
     'lukas-reineke/indent-blankline.nvim',
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help ibl`
     main = 'ibl',
-    opts = {},
+    opts = {
+      scope = { enabled = false },
+    },
   },
 
   -- "gc" to comment visual regions/lines
