@@ -52,4 +52,25 @@ opt.scrolloff = 8
 opt.signcolumn = "yes"
 opt.isfname:append("@-@")
 
--- opt.updatetime = 50
+-- Decrease update time
+opt.updatetime = 250
+opt.timeoutlen = 300
+
+-- Set completeopt to have a better completion experience
+opt.completeopt = 'menuone,noselect'
+
+-- [[ Basic Keymaps ]]
+-- Keymap for better default experience
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+
+-- [[ Highlight on yank ]]
+-- See `:help vim.highlight.on_yank()`
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})
+
