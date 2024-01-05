@@ -1,22 +1,10 @@
 -- auto install packer if not installed
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
 
 
 local plugins ={
 
   "nvim-lua/plenary.nvim", -- lua functions that many plugins use
-  "wbthomason/packer.nvim",
+  --
   -- colorschemes
   { "catppuccin/nvim", name = "catppuccin" },
   "christoomey/vim-tmux-navigator", -- tmux & split window navigation
@@ -48,9 +36,7 @@ local plugins ={
   "nvim-lualine/lualine.nvim",
 
   -- fuzzy finding with telescope
-  { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }, -- dependency for better sorting performance
-
-  { "nvim-telescope/telescope.nvim", branch = "0.1.x" }, -- fuzzy finder
+  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
 
    {
     'VonHeikemen/lsp-zero.nvim',
@@ -65,12 +51,18 @@ local plugins ={
       {'hrsh7th/nvim-cmp'},
       {'hrsh7th/cmp-buffer'},
       {'hrsh7th/cmp-path'},
-      {'saadparwaiz1/cmp_luasnip'},
+      --{'saadparwaiz1/cmp_luasnip'},
       {'hrsh7th/cmp-nvim-lsp'},
       {'hrsh7th/cmp-nvim-lua'},
 
       -- Snippets
-      {'L3MON4D3/LuaSnip'},
+      --{
+        "L3MON4D3/LuaSnip",
+        -- follow latest release.
+      --  version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        -- install jsregexp (optional!).
+       -- build = "make install_jsregexp"
+     -- },
       {'rafamadriz/friendly-snippets'},
     }
   },
@@ -87,7 +79,6 @@ local plugins ={
   },
 
   -- auto closing
-  "windwp/nvim-autopairs", -- autoclose parens, brackets, quotes, etc...
   { "windwp/nvim-ts-autotag", after = "nvim-treesitter" }, -- autoclose tags
 
   -- vimTex
