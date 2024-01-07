@@ -70,3 +70,6 @@ keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end
 
 -- lazy.nvim
 keymap.set("n", "<leader>l", ":Lazy home<CR>")
+
+-- checkhealth
+keymap.set("n", "<leader>h", ":checkhealth")
