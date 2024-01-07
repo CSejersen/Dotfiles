@@ -1,8 +1,7 @@
 vim.g.mapleader = " "
 local keymap = vim.keymap -- for conciseness 
---
+
 -- general keymaps 
-keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
@@ -25,7 +24,7 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 
 -- move highligted text with J K 
 keymap.set("v","J",":m '>+1<CR>gv=gv")
-keymap.set("v","K",":m '>-2<CR>gv=gv")
+keymap.set("v","K",":m '<-2<CR>gv=gv")
 
 -- centered line while scrolling
 keymap.set("n","<C-d>","<C-d>zz")
@@ -46,7 +45,7 @@ keymap.set("n","<leader>sm", ":MaximizerToggle<CR>")
 keymap.set("n","<leader>e", ":NvimTreeToggle<CR>")
 
 -- telescope
-keymap.set("n", "<C-f>", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
+keymap.set("n", "<C-f>", "<cmd>Telescope find_files<cr>", {desc = 'search all files of current directory'}) -- find files within current working directory, respects .gitignore
 keymap.set("n", "<C-g>", "<cmd>Telescope git_files<cr>") -- find files within current git repo, respects .gitignore
 keymap.set("n", "<C-s>", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
@@ -68,3 +67,6 @@ keymap.set("n", "<leader>xd", function() require("trouble").toggle("document_dia
 keymap.set("n", "<leader>xq", function() require("trouble").toggle("quickfix") end)
 keymap.set("n", "<leader>xl", function() require("trouble").toggle("loclist") end)
 keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end)
+
+-- lazy.nvim
+keymap.set("n", "<leader>l", ":Lazy home<CR>")

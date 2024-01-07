@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-SwitchAudioSource -s "Højttalere i MacBook Pro"
+SwitchAudioSource -s "MacBook Pro Speakers"
 
 #use with command: s
