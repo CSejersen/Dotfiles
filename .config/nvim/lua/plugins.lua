@@ -1,30 +1,38 @@
 return {
-  -- Detect tabstop and shiftwidth automatically
-  "tpope/vim-sleuth",
+	-- Detect tabstop and shiftwidth automatically
+	"tpope/vim-sleuth",
 
-  -- tmux & split window navigation
-  "christoomey/vim-tmux-navigator",
+	-- navigate between windows with control + h,j,k,l
+	"christoomey/vim-tmux-navigator",
 
-  -- Maximizes and restores current window (mapped to )
-  "szw/vim-maximizer",
+	-- Git related
+	"tpope/vim-fugitive",
 
-  -- Essential plugins
-  "tpope/vim-surround",              -- add, delete, change surroundings (it's awesome)
+	-- Maximizes and restores current window (mapped to <leader>sm [S]plit [M]aximize)
+	"szw/vim-maximizer",
 
-  -- undo tree
-  "mbbill/undotree",
+	-- add, delete, change surroundings (it's awesome)
+	"tpope/vim-surround",
 
-  -- auto closing
-  "windwp/nvim-autopairs",                                       -- autoclose parens, brackets, quotes, etc...
-  { "windwp/nvim-ts-autotag", dependencies = "nvim-treesitter" }, -- autoclose tags
+	-- undo tree
+	"mbbill/undotree",
 
-  -- vimTex
-  "lervag/vimtex",
+	-- autoclose parens, brackets, quotes, etc...
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		opts = {},
+	},
 
-  -- color tags on hex colors
-  "ap/vim-css-color",
+	-- autoclose tags
+	{ "windwp/nvim-ts-autotag", dependencies = "nvim-treesitter" },
 
-  -- "gc" to comment visual regions/lines
-  { "numToStr/Comment.nvim",  opts = {} },
+	-- vimTex
+	"lervag/vimtex",
 
+	-- color tags on hex colors
+	"ap/vim-css-color",
+
+	-- "gc" to comment visual regions/lines
+	{ "numToStr/Comment.nvim", opts = {} },
 }

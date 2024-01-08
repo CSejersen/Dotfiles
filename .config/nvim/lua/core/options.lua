@@ -41,6 +41,7 @@ opt.splitbelow = true
 -- Backup with undotree
 opt.swapfile = false
 opt.backup = false
+---@diagnostic disable-next-line: assign-type-mismatch
 opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 opt.undofile = true
 
@@ -73,4 +74,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
-
