@@ -49,7 +49,6 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 keymap.set("n", "<C-f>", "<cmd>Telescope find_files<cr>", { desc = "search all files of current directory" }) -- find files within current working directory, respects .gitignore
 keymap.set("n", "<C-g>", "<cmd>Telescope git_files<cr>") -- find files within current git repo, respects .gitignore
 keymap.set("n", "<C-s>", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
-keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 
 -- Undo tree
