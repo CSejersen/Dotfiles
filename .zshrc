@@ -101,28 +101,25 @@ else
 fi
 
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# [ALIASES]
 # For a full list of active aliases, run `alias`.
-
-alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias zshrc="nvim ~/.zshrc"
+alias skhdrc="nvim ~/.config/skhd/skhdrc"
+alias yabairc="nvim ~/.config/yabai/yabairc"
 alias tmuxconfig="nvim ~/.tmux.conf"
-alias nvimconfig="cd ~/.config/nvim && nvim init.lua" 
-alias skhdconfig="nvim ~/.config/skhd/skhdrc"
-alias yabaiconfig="nvim ~/.config/yabai/yabairc"
-alias wiki="nvim ~/vimwiki/index.md"
+alias nvimconfig="cd ~/.config/nvim && yadm enter nvim init.lua" 
 alias starshipconfig="nvim ~/.config/starship.toml"
+alias wiki="nvim ~/vimwiki/index.md"
 alias ls="ls -1"
-alias cs="config status"
+alias ys="yadm status"
 alias c="clear"
+alias cat="ccat"
 
 alias a="~/dev/scripts/airpods.sh"
 alias s="~/dev/scripts/speakers.sh"
 alias gs="git status"
 alias ..="cd .."
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # Using starship promt
 eval "$(starship init zsh)"
