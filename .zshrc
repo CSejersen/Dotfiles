@@ -76,18 +76,17 @@ fi
 # [ALIASES]
 # For a full list of active aliases, run `alias`.
 alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias zshrc="nvim ~/.zshrc"
-alias skhdrc="nvim ~/.config/skhd/skhdrc"
-alias yabairc="nvim ~/.config/yabai/yabairc"
-alias tmuxconfig="nvim ~/.tmux.conf"
+alias zshrc="yadm enter nvim ~/.zshrc"
+alias skhdrc="yadm enter nvim ~/.config/skhd/skhdrc"
+alias yabairc="yadm enter nvim ~/.config/yabai/yabairc"
+alias tmuxconfig="yadm enter nvim ~/.tmux.conf"
 alias nvimconfig="cd ~/.config/nvim && yadm enter nvim init.lua" 
-alias starshipconfig="nvim ~/.config/starship.toml"
+alias starshipconfig="yadm enter nvim ~/.config/starship.toml"
 alias wiki="nvim ~/vimwiki/index.md"
 alias ls="ls -1"
 alias ys="yadm status"
 alias c="clear"
 alias cat="ccat"
-
 alias a="~/dev/scripts/airpods.sh"
 alias s="~/dev/scripts/speakers.sh"
 alias gs="git status"
