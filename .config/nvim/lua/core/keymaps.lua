@@ -31,7 +31,7 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
 
--- greatest remap ever
+-- greatest remap ever (from ThePrimeagen)
 keymap.set("x", "<leader>p", '"_dP')
 
 -- leader c to change all instances of word under cursor
@@ -82,9 +82,6 @@ end)
 
 -- lazy.nvim
 keymap.set("n", "<leader>l", ":Lazy home<CR>")
-
--- checkhealth
-keymap.set("n", "<leader>h", ":checkhealth")
 
 -- Formatting
 keymap.set("n", "<leader>f", vim.lsp.buf.format)
