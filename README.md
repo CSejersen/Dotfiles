@@ -1,5 +1,5 @@
 # My Dotfiles
-I'm using yadm to manage my dotfiles. Yadm is a wrapper for a bare git repo, introducing some extra features.
+I'm using yadm to manage my dotfiles. Yadm is just a wrapper for a bare git repo, that introduces some nice extra features.
 
 ## Installing on a new system
 Step 1: install Homebrew
@@ -10,17 +10,17 @@ Step 2: Install yadm
 ```bash
 brew install yadm
 ```
-Step 3: Clone this repo:
+Step 3: Clone the dotfiles repo:
 ```bash
 yadm clone "https://github.com/CSejersen/Dotfiles"
 ```
-Will promt:
+After cloning yadm will promt:
 ```
 Found .config/yadm/bootstrap
 It appears that a bootstrap program exists.
 Would you like to execute it now? (y/n)
 ```
-Step 4: You can manually run bootstrap program, if you chose 'NO' in previous step.
+If you chose "no" in step 3, you can manually run the bootstrap program with:
 ```bash
 yadm bootstrap
 
