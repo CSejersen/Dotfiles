@@ -1,5 +1,5 @@
-# My Dotfiles
-I'm using yadm to manage my dotfiles. Yadm is just a wrapper for a bare git repo, that introduces some nice extra features.
+# Welcome to my $HOME
+I'm using yadm to manage my dotfiles. Yadm is a wrapper for a bare git repo, that introduces some usefull extra features.
 
 ## Installing on a new system
 Step 1: install Homebrew
