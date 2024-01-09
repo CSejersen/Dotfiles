@@ -118,7 +118,7 @@ fi
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias tmuxconfig="nvim ~/.tmux.conf"
-alias nvimconfig="cd ~/.config/nvim && nvim init.lua"
+alias nvimconfig="cd ~/.config/nvim && nvim init.lua" 
 alias skhdconfig="nvim ~/.config/skhd/skhdrc"
 alias yabaiconfig="nvim ~/.config/yabai/yabairc"
 alias wiki="nvim ~/vimwiki/index.md"

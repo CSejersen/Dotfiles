@@ -34,5 +34,5 @@ return {
 	"ap/vim-css-color",
 
 	-- "gc" to comment visual regions/lines
-	{ "numToStr/Comment.nvim", opts = {} },
+	"tpope/vim-commentary"
 }
