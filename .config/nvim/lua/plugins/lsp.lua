@@ -62,7 +62,7 @@ return {
 			local servers = {
 				clangd = {},
 				pyright = {},
-				bashls = {},
+				bashls = {filetypes = {"bash", "sh", ""}},
 				html = { filetypes = { "html", "twig", "hbs" } },
 				lua_ls = {
 					Lua = {
