@@ -47,15 +47,15 @@ return {
 
 				-- Actions
 				-- visual mode
-				map("v", "<leader><Space>s", function()
+				map("v", "<leader><Space>a", function()
 					gs.stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
 				end, { desc = "stage git hunk" })
-				map("v", "<leader><>r", function()
+				map("v", "<leader><Space>r", function()
 					gs.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
 				end, { desc = "reset git hunk" })
 				-- normal mode
 
-				map("n", "<leader><Space>s", gs.stage_hunk, { desc = "git stage hunk" })
+				map("n", "<leader><Space>a", gs.stage_hunk, { desc = "git stage hunk" })
 				map("n", "<leader><Space>r", gs.reset_hunk, { desc = "git reset hunk" })
 				map("n", "<leader><Space>S", gs.stage_buffer, { desc = "git Stage buffer" })
 				map("n", "<leader><Space>u", gs.undo_stage_hunk, { desc = "undo stage hunk" })
