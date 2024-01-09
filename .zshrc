@@ -7,7 +7,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="dracula"
 
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
