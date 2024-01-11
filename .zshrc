@@ -74,6 +74,7 @@ fi
 
 
 # [ALIASES]
+SCRIPT_PATH="/Users/sejersen/dev/shell_scripts"
 # For a full list of active aliases, run `alias`.
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias zshrc="yadm enter nvim ~/.zshrc"
