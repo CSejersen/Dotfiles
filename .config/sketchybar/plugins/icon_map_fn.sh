@@ -299,9 +299,9 @@ function icon_map() {
   "Preview" | "预览" | "Skim" | "zathura")
     icon_result=":pdf:"
     ;;
-  "PyCharm")
-    icon_result=":pycharm:"
-    ;;
+  # "PyCharm")
+  #   icon_result=":pycharm:"
+  #   ;;
   "Audacity")
     icon_result=":audacity:"
     ;;
