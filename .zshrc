@@ -95,6 +95,7 @@ alias a="~/dev/scripts/airpods.sh"
 alias s="~/dev/scripts/speakers.sh"
 alias gs="git status"
 alias ..="cd .."
+alias add="$SCRIPT_PATH/spotify/get_now_playing.sh && $SCRIPT_PATH/spotify/add_now_playing_to_playlist.sh"
 
 # Using starship promt
 eval "$(starship init zsh)"
