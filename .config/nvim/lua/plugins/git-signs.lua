@@ -81,7 +81,7 @@ return {
 				map("v", "<leader><Space>a", function()
 					gs.stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
 				end)
-				map("v", "<leader><Space>a", function()
+				map("v", "<leader><Space>r", function()
 					gs.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
 				end)
 				map("n", "<leader><Space>A", gs.stage_buffer)
