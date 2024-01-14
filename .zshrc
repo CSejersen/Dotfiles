@@ -110,6 +110,9 @@ eval "$(starship init zsh)"
 # For zoxide improved cd command
 eval "$(zoxide init zsh)"
 
+# Mcfly ctrl + r (better history) (install with brew)
+eval "$(mcfly init zsh)"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
