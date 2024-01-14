@@ -12,16 +12,17 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   opts = {
 
-    -- vim.opt.foldmethod = "expr"
-    -- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-    -- vim.opt.foldenable = false --                  " Disable folding at startup.
-
-    disable_netrw = true,
-    hijack_netrw = true,
-    respect_buf_cwd = true,
-    sync_root_with_cwd = true,
-
+    sort = {
+      sorter = "case_sensitive",
+    },
+    view = {
+      width = 35,
+    },
+    filters = {
+      dotfiles = true,
+    },
     renderer = {
+      group_empty = true,
       icons = {
         glyphs = {
           folder = {
