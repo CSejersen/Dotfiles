@@ -42,8 +42,9 @@ keymap.set("n", "<leader>c", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
--- nvim-tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+-- Filetree
+keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- nvim-tree
+keymap.set("n", "<leader>E", ":Explore<CR>") -- builtin
 
 -- telescope
 keymap.set("n", "<C-f>", "<cmd>Telescope find_files<cr>", { desc = "search all files of current directory" }) -- find files within current working directory, respects .gitignore
