@@ -115,7 +115,7 @@ alias ..="cd .."
 alias add="$SCRIPT_PATH/spotify/get_now_playing.sh && $SCRIPT_PATH/spotify/add_now_playing_to_playlist.sh"
 
 # Using starship promt
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 # For zoxide improved cd command
 eval "$(zoxide init zsh)"
