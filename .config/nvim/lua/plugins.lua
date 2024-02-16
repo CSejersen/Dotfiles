@@ -1,6 +1,6 @@
 return {
 	-- Detect tabstop and shiftwidth automatically
-	"tpope/vim-sleuth",
+	-- "tpope/vim-sleuth",
 
 	-- navigate between windows with control + h,j,k,l
 	"christoomey/vim-tmux-navigator",
