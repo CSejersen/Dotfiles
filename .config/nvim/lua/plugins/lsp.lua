@@ -61,6 +61,8 @@ return {
 
 			local servers = {
 				clangd = {},
+				intelephense = {},
+        tsserver = {},
 				pyright = {},
 				bashls = {filetypes = {"bash", "sh"}},
 				html = { filetypes = { "html", "twig", "hbs" } },
