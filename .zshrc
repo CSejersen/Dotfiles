@@ -4,6 +4,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# golang path
+export PATH=${PATH}:`go env GOPATH`/bin
 ZSH_THEME="dracula"
 
 # Case-sensitive completion must be off. _ and - will be interchangeable.
