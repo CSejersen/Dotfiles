@@ -81,8 +81,8 @@ keymap.set("n", "gR", function()
 	require("trouble").toggle("lsp_references")
 end)
 
--- lazy.nvim
-keymap.set("n", "<leader>l", ":Lazy home<CR>")
-
 -- Formatting
 keymap.set("n", "<leader>f", vim.lsp.buf.format)
+
+-- highlight cpp
+keymap.set("n", "<leader><space>h", ":setf cpp<CR>")
