@@ -1,5 +1,4 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
+
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -113,6 +112,7 @@ alias s="~/dev/scripts/speakers.sh"
 alias gs="git status"
 alias ..="cd .."
 alias add="$SCRIPT_PATH/spotify/get_now_playing.sh && $SCRIPT_PATH/spotify/add_now_playing_to_playlist.sh"
+alias scp="@SCRPIT_PATH/scp.sh"
 
 # Using starship promt
 # eval "$(starship init zsh)"
