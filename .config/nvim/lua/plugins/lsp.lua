@@ -60,11 +60,11 @@ return {
 			require("mason-lspconfig").setup()
 
 			local servers = {
-				clangd = {},
+				clangd = { "tpp" },
 				intelephense = {},
-        tsserver = {},
+				tsserver = {},
 				pyright = {},
-				bashls = {filetypes = {"bash", "sh"}},
+				bashls = { filetypes = { "bash", "sh" } },
 				html = { filetypes = { "html", "twig", "hbs" } },
 				lua_ls = {
 					Lua = {
@@ -101,7 +101,7 @@ return {
 				end,
 			})
 		end,
-	},
+  },
 
 	{
 		-- Autocompletion
