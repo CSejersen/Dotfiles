@@ -103,6 +103,8 @@ SCRIPT_PATH="/Users/sejersen/dev/shell_scripts"
 # For a full list of active aliases, run `alias`.
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias nvim="~/Bin/neovim/build/bin/nvim"
+alias rider="~/Bin/JetBrains\ Rider-2024.2.5/bin/rider.sh"
+alias spp="spotify_player"
 alias zshrc="yadm enter nvim ~/.zshrc"
 alias tmuxconfig="yadm enter nvim ~/.tmux.conf"
 alias nvimconfig="cd ~/.config/nvim && yadm enter nvim init.lua" 
