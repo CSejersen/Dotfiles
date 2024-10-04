@@ -1,7 +1,8 @@
-import = ["~/.config/alacritty/themes/themes/ayu_dark.toml"]
+import = ["~/.config/alacritty/themes/themes/rose-pine.toml"]
 
 [colors.primary]
-background = "#000000"
+background = "#050505"
+# background = "#000000"
 foreground = "#edecee"
 
 [colors.cursor]
@@ -11,6 +12,7 @@ cursor = '#ECEFF4'
 [window]
 padding.x = 10
 padding.y = 10
+# opacity = 1
 
 [env]
 TERM = "xterm-256color"

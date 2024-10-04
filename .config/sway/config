@@ -20,8 +20,9 @@ set $menu wofi --show run
 
 gaps outer 5
 gaps inner 5
+seat * xcursor_theme default 22
 
-# default_border none
+default_border none
 default_floating_border none
 font pango:monospace 0
 titlebar_padding 1
@@ -59,10 +60,11 @@ exec swaybg -i ~/.config/wallpapers/cosmic-timetraveler-LhDWW8PhPoE-unsplash.jpg
 # Example configuration:
 #
   input "18003:1:foostan_Corne_Keyboard" {
-    xkb_layout us,
+    xkb_layout us
   }
   input "1452:835:Apple_Internal_Keyboard_/_Trackpad" {
-    xkb_layout dk,
+    xkb_layout "dk"
+    xkb_variant "mac"
     xkb_options caps:ctrl_modifier
   }
 #
@@ -221,8 +223,8 @@ bindsym $mod+semicolon mode "resize"
     bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
     bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
     # Special keys to adjust brightness via brightnessctl
-    bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
-    bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+    bindsym --locked XF86MonBrightnessDown exec light -U 5
+    bindsym --locked XF86MonBrightnessUp exec light -A 5
     # Special key to take a screenshot with grim
     bindsym Print exec grim
 

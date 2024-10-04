@@ -34,7 +34,7 @@ return {
 	-- "gc" to comment visual regions/lines
 	"tpope/vim-commentary",
 
-	"Bekaboo/dropbar.nvim",
+	-- "Bekaboo/dropbar.nvim",
 
 	-- for Rust
 	{

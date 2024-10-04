@@ -11,10 +11,13 @@ zmodload zsh/zprof
 export ZSH="$HOME/.oh-my-zsh"
 export DISPLAY=:0
 
+export DOTNET_ROOT=$HOME/dotnet
+
 # golang path
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=${PATH}:`go env GOPATH`/bin
 export PATH="$PATH:/Users/sejersen/.dotnet/tools"
+export PATH=$PATH:$HOME/dotnet
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Case-sensitive completion must be off. _ and - will be interchangeable.
