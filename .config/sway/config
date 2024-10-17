@@ -63,10 +63,12 @@ exec swaybg -i ~/.config/wallpapers/cosmic-timetraveler-LhDWW8PhPoE-unsplash.jpg
     xkb_layout us
   }
   input "1452:835:Apple_Internal_Keyboard_/_Trackpad" {
-    xkb_layout "dk"
-    xkb_variant "mac"
+    xkb_layout dk 
+    xkb_variant "mac_nodeadkeys"
     xkb_options caps:ctrl_modifier
+    # xkb_file "~/.config/xkb/dk.xkb"
   }
+
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.

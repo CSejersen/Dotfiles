@@ -88,16 +88,16 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions zsh-syntax-highlighting zsh-completions macos zsh-nvm fzf-tab)
+plugins=(zsh-autosuggestions zsh-syntax-highlighting zsh-completions macos zsh-nvm fzf-tab )
 #
 
 source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+  export EDITOR='nvim'
 else
-  export EDITOR='vim'
+  export EDITOR='nvim'
 fi
 
 
@@ -105,7 +105,6 @@ fi
 SCRIPT_PATH="/Users/sejersen/dev/shell_scripts"
 # For a full list of active aliases, run `alias`.
 alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias nvim="~/Bin/neovim/build/bin/nvim"
 alias rider="~/Bin/JetBrains\ Rider-2024.2.5/bin/rider.sh"
 alias spp="spotify_player"
 alias zshrc="yadm enter nvim ~/.zshrc"
