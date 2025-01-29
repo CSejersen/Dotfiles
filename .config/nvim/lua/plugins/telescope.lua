@@ -30,6 +30,7 @@ return {
 							["<C-j>"] = actions.move_selection_next, -- move to next result
 						},
 					},
+					file_ignore_patterns = { "node_modules", ".git/", "dist/", "build/" }, -- Ignore heavy folders
 				},
 			})
 
@@ -62,8 +63,7 @@ return {
 			require("telescope").setup({
 				extensions = {
 					["ui-select"] = {
-						require("telescope.themes").get_dropdown({
-						}),
+						require("telescope.themes").get_dropdown({}),
 					},
 				},
 			})
